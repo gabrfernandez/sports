@@ -1,8 +1,9 @@
 const mongoose=require('mongoose')
 
-mongoose.connect("mongoosedb://localhost/sports", {
+mongoose.connect("mongodb://localhost/sports", {
     useNewUrlParser:true,
     useUnifiedTopology:true,
+    useFindAndModify:true
 }).then(()=>{
     console.log("DB Connection Established")
 }).catch(()=>{

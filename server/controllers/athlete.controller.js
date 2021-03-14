@@ -28,8 +28,8 @@ module.exports.create=(request, response)=>{
 }
 
 module.exports.detail=(request, response)=>{
-    const {id} =reques.params;
-    Athlete.findOne({_id: id})
+    const {id} =request.params;
+    Athlete.findById({_id: id})
         .then(athlete=>{
             response.json(athlete)
         })

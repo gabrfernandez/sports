@@ -21,6 +21,6 @@ const AthleteSchema= new mongoose.Schema({
     team:{
         type:String
     }
-},{timestamps:true})
+},{timestamps:true});
 
 module.exports.Athlete = mongoose.model('Athlete', AthleteSchema)
