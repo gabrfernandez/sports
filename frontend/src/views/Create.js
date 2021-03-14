@@ -19,6 +19,10 @@ const Create = () => {
             <h1>Create an Athlete</h1>
             <Form 
                 onSubmitHandler={onSubmitHandler}
+                initialFirstName=""
+                initialLastName=""
+                initialSport=""
+                initialTeam=""
             />
         </div>
     )

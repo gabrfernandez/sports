@@ -20,7 +20,7 @@ const Detail = ({id}) => {
             <h1>{athlete.firstName} {athlete.lastName}</h1>
             <h3>Team: {athlete.team}</h3>
             <p>Sport: {athlete.sport}</p>
-            <DeleteButton />
+            <DeleteButton id={athlete._id} />
         </div>
     )
 }
