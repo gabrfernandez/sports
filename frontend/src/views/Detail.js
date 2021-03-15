@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 import DeleteButton from '../components/DeleteButton'
+import {Card, CardContent} from '@material-ui/core'
 
 const Detail = ({id}) => {
     const [athlete, setAthlete]=useState({});
@@ -17,10 +18,14 @@ const Detail = ({id}) => {
 
     return (
         <div>
-            <h1>{athlete.firstName} {athlete.lastName}</h1>
-            <h3>Team: {athlete.team}</h3>
-            <p>Sport: {athlete.sport}</p>
-            <DeleteButton id={athlete._id} />
+            <Card>
+                <CardContent>
+                    <h1>{athlete.firstName} {athlete.lastName}</h1>
+                    <h3>Team: {athlete.team}</h3>
+                    <p>Sport: {athlete.sport}</p>
+                    <DeleteButton id={athlete._id} />
+                </CardContent>
+            </Card>
         </div>
     )
 }

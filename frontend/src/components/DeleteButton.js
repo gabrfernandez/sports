@@ -1,6 +1,7 @@
 import { navigate } from '@reach/router'
 import axios from 'axios'
 import React from 'react'
+import {Button} from '@material-ui/core'
 
 const DeleteButton = ({id}) => {
     
@@ -17,7 +18,7 @@ const DeleteButton = ({id}) => {
     
     return (
         <div>
-            <button onClick={onClickHandler}>Delete</button>
+            <Button variant="contained" color="secondary" onClick={onClickHandler}>Delete</Button>
         </div>
     )
 }
